@@ -21,6 +21,7 @@ class AuthController extends Controller
         $request->session()->regenerate();
 
         return redirect()->intended('dashboard')->with('success', 'Login bem-sucedido!');
+        return redirect()->rout('produtos_index');
     }
 
     // Se as credenciais estiverem erradas
